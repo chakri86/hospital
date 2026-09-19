@@ -1,0 +1,26 @@
+{
+  "version": "0.1.0",
+  "as_of": "2026-09-19",
+  "currency": "INR",
+  "months": 60,
+  "subscription_mix": [
+    {"segment": "clinic", "share": 0.6, "monthly_price": 3000},
+    {"segment": "small_hospital_opd", "share": 0.3, "monthly_price": 18000},
+    {"segment": "laboratory", "share": 0.1, "monthly_price": 8000}
+  ],
+  "setup_fee_per_new_facility": 20000,
+  "acquisition_cost_per_new_facility": 22000,
+  "onboarding_cost_per_new_facility": 12000,
+  "direct_monthly_cost_per_average_facility": 1600,
+  "bad_debt_fraction": 0.02,
+  "collection_lag_months": 1,
+  "funding_buffer_fraction": 0.2,
+  "fixed_operating_monthly_by_year": [600000, 900000, 1500000, 2400000, 3600000],
+  "fixed_cloud_monthly_by_year": [40000, 70000, 120000, 200000, 300000],
+  "capex_at_start_of_year": [500000, 300000, 800000, 1000000, 1500000],
+  "scenarios": {
+    "downside": {"monthly_churn": 0.025, "gross_adds_per_month_by_year": [1, 4, 10, 18, 25]},
+    "base": {"monthly_churn": 0.015, "gross_adds_per_month_by_year": [2, 8, 20, 35, 50]},
+    "upside": {"monthly_churn": 0.01, "gross_adds_per_month_by_year": [3, 12, 30, 55, 80]}
+  }
+}
